@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container register">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header"><a href="{{ path('app_front_login') }}"><div class="brand-logo"></div></a></div>
+
+                <div class="card-body">
+                    <form id="register_submit" method="POST" action="{{ path('app_front_register') }}">
+                        
+                        <div class="form-group row text-center">
+                            <div class="col">
+                                <div class="mt-4 mb-3">
+                                    <h2 class="font-weight-bold text-uppercase">Registrar cuenta</h2>
+                                    <span class="font-italic">
+                                        Por favor, complete el formulario con su información personal. <br>
+                                        <b>Todos los campos son requeridos.</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="email" class="col-form-label">Correo Electrónico</label>
+                                <input id="email" type="email" class="form-control" name="email" required autocomplete="email">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="password" class="col-form-label">Contraseña</label>
+                                <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="form-group col">
+                                <label for="password-confirm" class="col-form-label">Confirmar contraseña</label>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col text-center">
+                                <button id="register_button" type="submit" class="btn btn-primary d-block d-md-inline-block">
+                                    Crear Cuenta
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+# Instructions
+
+## Versions used
+
+- PHP 8.1
+- Symfony 6.4
+- PostgreSQL 15.5.1
+
+# Database
+
+Create a .env, making sure to have the correct url
+
+User: root
+Pass: 1234
+Host: 127.0.0.1
+Port: 5432
+Database: aaxistest
+
+DATABASE_URL="postgresql://postgres:1234@127.0.0.1:5432/aaxistest?serverVersion=15&charset=utf8"
+
+# Install composer packages
+
+Execute this command inside the project folder: 
+composer install
+
+# Install npm packages
+
+Execute this command inside the project folder:
+npm install
+
+# Create database
+
+Execute this command inside the project folder: 
+symfony console doctrine:database:create
+
+# Migrations
+
+Execute this command inside the project folder: 
+php bin/console doctrine:migrations:migrate
+
+# Load the database with testing user and products
+
+php bin/console doctrine:fixtures:load
+
+# Run the server with 
+
+symfony server:start
+
+Webapp will create in http://127.0.0.1:8000
+
+# Routes
+
+A Postman collection has been provided in the root folder.

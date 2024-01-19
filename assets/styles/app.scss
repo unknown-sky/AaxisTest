@@ -1,0 +1,186 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html {
+    body {
+        font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+        color: #343434;
+    }
+    
+    section {
+        h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.auth {
+    .text-primary {
+        color: #40B4E5 !important;
+    }
+
+    .text-secondary {
+        color: #4d4d4d !important;
+    }
+
+    /* Phone font */
+
+    .form-group.row {
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile first */
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.275rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+    }
+
+    /* Tablet */
+    @media (min-width: 500px) {
+
+        h1 {
+            font-size: 1.7rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .bg-light {
+        background-color: #eff2f5 !important;
+    }
+
+    .btn-primary {
+        border-color: #40B4E5;
+        background-color: #40B4E5;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        // padding: 0.3em 1em!important;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #333;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &.btn.btn-primary {
+            color: white;
+        }
+
+        &.btn-primary:hover,
+        &.btn-primary:not(:disabled):not(.disabled):active,
+        &.btn-primary:not(:disabled):not(.disabled).active,
+        .show > &.btn-primary.dropdown-toggle {
+            color: #40B4E5;
+            background-color: transparent;
+            border-color: #40B4E5;
+        }
+    }
+
+    .btn-primary:hover,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: #40B4E5;
+        background-color: transparent;
+        border-color: #40B4E5;
+    }
+
+    @media (min-width: 769px) {
+        .carousel-inner {
+            height: 700px;
+        }
+        
+        .carousel-inner .carousel-item img {
+            height: 700px;
+            width: 100%;
+            object-fit: cover; // here
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            &.btn.btn-primary {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+        .navbar-light .navbar-nav .nav-link {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+        
+            &.btn.btn-primary {
+                margin-right: 0;
+                background: none;
+                border: none;
+                text-align: left;
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Top Menu
+
+    // logo
+    .home-link .brand-logo,
+    .card-header .brand-logo {
+        width: 280px;
+        height: 45px;
+        background: url(https://placehold.co/280x45);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center
+    }
+}
+
+/* Registration */
+
+.auth .register {
+
+    button {
+        width: 50%;
+    }
+
+    @media all and (max-width:480px) {
+        button {
+            width: 100%;
+            display: block;
+        }
+    }
+}
