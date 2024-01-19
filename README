@@ -10,7 +10,7 @@
 
 Create a .env, making sure to have the correct url
 
-User: root
+User: postgres
 Pass: 1234
 Host: 127.0.0.1
 Port: 5432
